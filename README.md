@@ -89,17 +89,14 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini di lin
     ```
 
 9.  **Tambahkan symbolic link untuk storage:**
-
     ```bash
     php artisan storage:link
     ```
 
 10.  **Seed database dengan data awal:**
-
      ```bash
     php artisan db:seed
-     ``
-
+    ```
 12. **Instal dependensi frontend menggunakan NPM atau Yarn:**
 
     ```bash
