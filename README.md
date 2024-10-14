@@ -55,7 +55,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini di lin
 
         Edit `.env` untuk mengatur pengaturan database Anda, misalnya:
 
-        ```env
+    ```env
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
         DB_PORT=3306
@@ -97,7 +97,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini di lin
 10.  **Seed database dengan data awal:**
 
     ```bash
-    php artisan db:seed --class=UsersSeeder
+    php artisan db:seed
     ```
 
 11. **Instal dependensi frontend menggunakan NPM atau Yarn:**
