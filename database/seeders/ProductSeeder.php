@@ -15,8 +15,8 @@ class ProductSeeder extends Seeder
     public function run()
     {
         // Misalkan Anda mendapatkan UUID dari kategori dan brand
-        $categoryId = '5f85c1b1-68e1-4a0f-978a-e8fe267ce161'; // UUID kategori
-        $brandId = '4249df7b-03fa-4fdb-8607-59ffefa7f258'; // UUID brand
+        $categoryId = '03941ac9-ff5b-479f-a9e4-8698d4a131b1'; // UUID kategori
+        $brandId = 'fd6af09e-89fa-4dc0-b533-21a074f46ba4'; // UUID brand
 
         // Nama dan deskripsi produk sesuai gambar
         $products = [

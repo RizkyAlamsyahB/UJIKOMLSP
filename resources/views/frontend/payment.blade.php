@@ -7,7 +7,7 @@
                 <h2>Invoice</h2>
             </div>
             <div class="card-body">
-                <!-- Order Details Section Moved to the Top -->
+                <!-- Order Details Section -->
                 <div class="mb-4">
                     <h4 class="font-weight-bold">Order Details</h4>
                     <ul class="list-group list-group-flush">
@@ -23,7 +23,7 @@
                 <!-- Buttons Section -->
                 <div class="text-right">
                     <button id="pay-button" class="btn btn-primary btn-lg shadow mr-2">Proceed to Payment</button>
-                    <button class="btn btn-secondary btn-lg shadow mr-2" onclick="window.print()">Print</button>
+                    <button class="btn btn-secondary btn-lg shadow mr-2" onclick="printInvoice()">Print</button>
                     <button class="btn btn-warning btn-lg shadow">Cancel Order</button>
                 </div>
 
@@ -58,6 +58,22 @@
                 }
             });
         });
+
+        function printInvoice() {
+            // Hide non-printable elements
+            var nonPrintableElements = document.querySelectorAll('.card-header, .text-right');
+            nonPrintableElements.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Print the document
+            window.print();
+
+            // Show non-printable elements again after printing
+            nonPrintableElements.forEach(function(el) {
+                el.style.display = '';
+            });
+        }
     </script>
 
     <style>

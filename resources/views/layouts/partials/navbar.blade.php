@@ -52,7 +52,12 @@
                         </a>
                     </li>
 
-
+                    <li class="sidebar-item {{ request()->is('orders*') ? 'active' : '' }}">
+                        <a href="{{ url('orders') }}" class="sidebar-link">
+                            <i class="bi bi-cart-fill"></i> <!-- Ikon keranjang untuk Order -->
+                            <span>Orders</span>
+                        </a>
+                    </li>
                     </li>
                 </ul>
             </div>

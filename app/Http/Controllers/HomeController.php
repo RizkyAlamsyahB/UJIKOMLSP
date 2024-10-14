@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,18 +25,21 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-{
-    $user = Auth::user();
-    $cartCount = 0;
+    {
+        $user = Auth::user();
+        $cartCount = 0;
 
-    if ($user) {
-        $cart = $user->cart()->with('products')->first();
-        if ($cart) {
-            $cartCount = $cart->products->sum('pivot.quantity');
+        if ($user) {
+            $cart = $user->cart()->with('products')->first();
+            if ($cart) {
+                $cartCount = $cart->products->sum('pivot.quantity');
+            }
         }
-    }
 
-    return view('home', compact('cartCount'));
-}
+        // Hitung jumlah order yang ada di tabel orders
+        $totalOrders = Order::count();
+
+        return view('home', compact('cartCount', 'totalOrders'));
+    }
 
 }

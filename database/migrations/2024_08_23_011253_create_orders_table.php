@@ -17,6 +17,7 @@ return new class extends Migration
             $table->decimal('total_price', 15, 2);
             $table->enum('status', ['pending', 'processing', 'completed', 'canceled'])->default('pending');
             $table->timestamp('order_date');
+            $table->string('midtrans_order_id')->nullable(); // Add a new column for Midtrans order ID
             $table->timestamps();
             $table->softDeletes();
         });

@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\PromotionController;
@@ -41,6 +43,12 @@ Route::middleware(['auth', 'checkAdmin'])->group(function () {
     Route::resource('products', ProductsController::class);
 
     Route::resource('promotions', PromotionController::class);
+
+    // use App\Http\Controllers\Admin\OrderController;
+
+    Route::get('orders', [OrderController::class, 'index'])->name('admin.orders.index');
+
+
 });
 
 // Public route (no admin check required)
@@ -51,6 +59,12 @@ Route::get('/products/filter', [ProductsController::class, 'filter'])->name('pro
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/pay', [CheckoutController::class, 'pay'])->name('checkout.pay');
 Route::post('/payment-success', [CheckoutController::class, 'paymentSuccess'])->name('payment.success');
+Route::post('payment/notification', [CheckoutController::class, 'paymentNotification'])->name('payment.notification');
+
+
+Route::get('/order/success/{order}', [OrdersController::class, 'showSuccessPage'])->name('frontend.order.showSuccessPage');
+
+
 
 
 // Rute untuk melihat keranjang belanja
@@ -60,3 +74,4 @@ Route::post('/cart/add/{productId}', [CartController::class, 'addProduct'])->nam
 Route::delete('/cart/remove/{productId}', [CartController::class, 'removeProduct'])->name('cart.remove');
 Route::post('/cart/update/{productId}', [CartController::class, 'updateProduct'])->name('cart.update');
 Route::delete('cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+

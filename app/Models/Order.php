@@ -15,12 +15,12 @@ class Order extends Model
     use HasFactory, SoftDeletes;
 
 
+
+    protected $keyType = 'string'; // Since UUID is a string
+    public $incrementing = false; // Disable auto-incrementing
+
     protected $fillable = [
-        'id',
-        'user_id',
-        'total_price',
-        'status',
-        'order_date',
+        'id', 'user_id', 'total_price', 'status', 'order_date'
     ];
 
     public function user()
