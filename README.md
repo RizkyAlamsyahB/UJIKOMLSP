@@ -1,4 +1,4 @@
-# Proyek UJikom LSP JUnior Web Programmer
+# Proyek UJikom Junior Web Programmer
 
 ## Deskripsi
 
