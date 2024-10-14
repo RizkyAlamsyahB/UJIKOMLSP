@@ -95,9 +95,9 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini di lin
     ```
 
 10.  **Seed database dengan data awal:**
-
      ```bash
     php artisan db:seed
+    ```
     ```
 
 11. **Instal dependensi frontend menggunakan NPM atau Yarn:**
