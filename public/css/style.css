@@ -1,0 +1,130 @@
+
+body {
+    background-color: white;
+
+}
+.hero {
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-custom-bg {
+    background-color: #ED127C !important;
+}
+
+
+.navbar-brand img {
+    width: 50px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: auto; /* Agar proporsi gambar tetap terjaga */
+}
+
+
+.navbar-collapse {
+    justify-content: space-between; /* Space between logo and navigation links */
+}
+/* Atur tombol navigasi */
+.hero .carousel-item {
+    position: relative; /* Ensure carousel items are positioned correctly */
+
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure items take up full carousel height */
+}
+
+.hero .carousel-item .card {
+    width: 75%; /* Sesuaikan dengan ukuran yang diinginkan, misalnya 75% */
+    margin: auto;
+    border-radius: 10px; /* Menambahkan border radius jika diperlukan */
+    overflow: hidden; /* Untuk memastikan gambar tidak keluar dari card */
+    position: relative; /* Ensure card is correctly positioned */
+}
+
+.hero .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Memastikan gambar memenuhi card dengan baik */
+    border-radius: 10px; /* Jika ingin gambar juga memiliki border radius */
+}
+/* Custom Carousel Controls inside Card */
+.carousel-control-custom {
+    background-color: white; /* Background warna putih */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow abu-abu */
+    border-radius: 50%; /* Border radius lingkaran */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%; /* Position at the vertical center */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 5;
+    border: none;
+}
+
+/* Posisi tombol di dalam kartu */
+.carousel-control-custom.prev-btn {
+    left: 10px; /* Sesuaikan jarak dari tepi kiri kartu */
+}
+
+.carousel-control-custom.next-btn {
+    right: 10px; /* Sesuaikan jarak dari tepi kanan kartu */
+}
+
+/* Optional: Hover effects */
+.carousel-control-custom:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.d-flex {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+.btn:hover {
+    color: var(--bs-secondary); /* Hover color */
+}
+
+.fw-semibold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+
+/* Tambahkan efek hover pada tombol */
+.carousel-control-custom:hover {
+    background-color: #f8f9fa; /* Warna sedikit lebih gelap saat hover */
+    color: #6c757d; /* Warna panah lebih gelap saat hover */
+}
+.product-card {
+    background-color: #FFFFFF;
+
+}
+
+
+.product-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+.product-card .card-text.fw-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
