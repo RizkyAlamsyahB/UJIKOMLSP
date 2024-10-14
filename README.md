@@ -24,7 +24,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini di lin
 1.  **Clone repositori:**
 
     ```bash
-    git clone https://github.com/RizkyAlamsyahB/E-LIBRARY.git
+    git clone https://github.com/RizkyAlamsyahB/UJIKOMLSP.git
     ```
 
 2.  **Masuk ke direktori proyek:**
